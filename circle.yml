@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -it softwaregroup/ut-docker npm outdated
+    - docker run -it softwaregroup/ut-docker npm ls ut-alert ut-bitsyntax ut-bus ut-cache ut-codec ut-error ut-front ut-identity ut-log ut-permission ut-port-console ut-port-file ut-port-ftp ut-port-http ut-port-httpserver ut-port-jsonrpc ut-port-mail ut-port-performance ut-port-postgres ut-port-schedule ut-port-script ut-port-sql ut-porut-rpc ut-rule ut-run ut-template ut-tools ut-translate-loader ut-ussd
 
 deployment:
   hub:
