@@ -1,6 +1,6 @@
 {
   "name": "ut-docker",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Base docker container for UT",
   "main": "index.js",
   "dependencies": {
