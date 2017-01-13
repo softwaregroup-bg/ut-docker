@@ -3,7 +3,7 @@
 URL="https://sonar.softwaregroup-bg.com/"
 USER="admin"
 PASSWORD="admin"
-SONAR_PROJECT_SETTINGS="project.properties"
+SONAR_PROJECT_SETTINGS="sonar-project.properties"
 SONAR_PROJECT_KEY="Test"
 
 if [ -z "$SONAR_PROJECT_KEY" ]; then
