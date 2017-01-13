@@ -11,4 +11,4 @@ RUN apk add --no-cache wget && \
 COPY sonar-scanner-run.sh /usr/bin
 COPY sonar-project.properties /usr/src/node-app/sonar-scanner-2.8/conf/sonar-scanner.properties
 COPY package.json package.json
-RUN npm install --registry=http://192.168.133.181:18081/repository/npm-all
+RUN npm install
