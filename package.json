@@ -33,7 +33,10 @@
     "ut-template":"*",
     "ut-tools":"*",
     "ut-translate-loader":"*",
-    "ut-ussd":"*"
+    "ut-ussd":"*",
+    "react-dom":"*",
+    "react-tap-event-plugin":"*"
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
