@@ -4,7 +4,7 @@ URL="http://35.163.188.144:9000/"
 USER="public"
 PASSWORD="public"
 SONAR_PROJECT_SETTINGS="sonar-project.properties"
-SONAR_PROJECT_KEY="Test"
+#SONAR_PROJECT_KEY="Test"
 
 if [ -z "$SONAR_PROJECT_KEY" ]; then
   echo "Undefined \"projectKey\"" && exit 1
