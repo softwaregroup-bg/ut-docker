@@ -11,6 +11,10 @@ if [ -z "$SONAR_PROJECT_KEY" ]; then
 else
   COMMAND="sonar-scanner -Dsonar.host.url=\"$URL\" -Dsonar.login=\"$USER\" -Dsonar.password=\"$PASSWORD\" -Dsonar.projectKey=\"$SONAR_PROJECT_KEY\" -Dproject.settings=\"$SONAR_PROJECT_SETTINGS\""
 
+  if [ ! -z "$SONAR_COVERAGE" ]; then
+    COMMAND="$COMMAND  -Dsonar.javascript.lcov.reportPath=\"$SONAR_COVERAGE\""
+  fi
+
   if [ ! -z "$SONAR_PROJECT_VERSION" ]; then
     COMMAND="$COMMAND -Dsonar.projectVersion=\"$SONAR_PROJECT_VERSION\""
   fi
