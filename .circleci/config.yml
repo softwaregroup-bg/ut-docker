@@ -7,5 +7,5 @@ jobs:
      - run: docker info
      - run:
          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-         docker build --rm=false -t softwaregroup/ut-docker .
+         docker build -t softwaregroup/ut-docker .
      - run: docker push softwaregroup/ut-docker
