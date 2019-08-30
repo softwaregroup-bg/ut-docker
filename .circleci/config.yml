@@ -6,6 +6,6 @@ jobs:
      - checkout
      - run: docker info
      - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-     - run: docker build -t softwaregroup/ut-docker:latest -t softwaregroup/ut-docker:7.0.0.
+     - run: docker build -t softwaregroup/ut-docker:latest -t softwaregroup/ut-docker:7.0.0 .
      - run: docker push softwaregroup/ut-docker:latest
      - run: docker push softwaregroup/ut-docker:7.0.0
