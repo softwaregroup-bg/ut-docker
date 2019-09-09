@@ -37,7 +37,7 @@
     "ut-port-httpserver": "^10.7.0",
     "ut-port-jsonrpc": "^7.0.1",
     "ut-port-mail": "^8.4.2",
-    "ut-port-performance": "^7.1.0",
+    "ut-port-performance": "^7.1.1",
     "ut-port-schedule": "^7.0.1",
     "ut-port-script": "^7.0.1",
     "ut-port-sql": "^7.15.2",
