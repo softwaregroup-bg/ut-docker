@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT builds",
-  "version": "7.0.15",
+  "version": "7.0.16",
   "main": "index.js",
   "dependencies": {
     "boom": "7.2.0",
@@ -44,8 +44,8 @@
     "ut-port-schedule": "^7.0.1",
     "ut-port-script": "^7.0.1",
     "ut-port-sql": "^7.16.1",
-    "ut-port-tcp": "^7.0.2",
-    "ut-run": "^10.10.9",
+    "ut-port-tcp": "^7.0.3",
+    "ut-run": "^10.10.11",
     "uuid": "3.3.2",
     "yaml": "1.6.0"
   },
