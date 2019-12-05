@@ -6,5 +6,5 @@ RUN set -xe \
 WORKDIR /app
 RUN chown -R node:node .
 USER node
-COPY --chown=node:node package.json package.json
+COPY --chown=node:node impl.json package.json
 RUN npm --production=false install
