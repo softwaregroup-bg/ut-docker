@@ -1,13 +1,13 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "8.0.8",
+  "version": "8.0.9",
   "main": "index.js",
   "dependencies": {
   },
   "devDependencies": {
     "tap": "13.1.1",
-    "ut-tools": "^6.30.5"
+    "ut-tools": "^6.30.6"
   },
   "engines": {
     "node": "^10.16.3",
