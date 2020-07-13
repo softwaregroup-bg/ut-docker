@@ -1,24 +1,24 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "8.0.22",
+  "version": "8.0.23",
   "main": "index.js",
   "dependencies": {
   },
   "devDependencies": {
-    "@babel/core": "7.7.5",
-    "@babel/parser": "7.7.5",
-    "@babel/template": "7.7.4",
-    "@babel/traverse": "7.7.4",
+    "@babel/core": "7.10.4",
+    "@babel/parser": "7.10.4",
+    "@babel/template": "7.10.4",
+    "@babel/traverse": "7.10.4",
     "json-schema-to-markdown": "1.1.1",
     "tap": "^14.10.7",
-    "ut-run": "^10.26.1",
-    "ut-tools": "^6.33.4",
-    "why-is-node-running": "^2.1.0"
+    "ut-run": "^10.26.3",
+    "ut-tools": "^6.33.5",
+    "why-is-node-running": "^2.2.0"
   },
   "engines": {
-    "node": "^10.16.3",
-    "npm": "^6.4.1",
-    "yarn": "^1.13.0"
+    "node": "^12.14.1",
+    "npm": "^6.13.4",
+    "yarn": "^1.17.3"
   }
 }
