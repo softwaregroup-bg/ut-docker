@@ -19,6 +19,8 @@ docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:9.0.0
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.0
+docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
 '''
                 }
             }
