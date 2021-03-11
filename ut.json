@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "main": "index.js",
   "dependencies": {
   },
@@ -12,8 +12,8 @@
     "@babel/traverse": "7.10.4",
     "json-schema-to-markdown": "1.1.1",
     "tap": "^14.11.0",
-    "ut-run": "^10.47.3",
-    "ut-tools": "^6.36.2",
+    "ut-run": "^10.48.1",
+    "ut-tools": "^6.37.0",
     "why-is-node-running": "^2.2.0"
   },
   "engines": {
