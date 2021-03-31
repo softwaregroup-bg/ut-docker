@@ -90,7 +90,7 @@
     "ut-browser-request": "^1.0.5",
     "ut-function.capture-hapi": "^1.1.2",
     "ut-function.capture-request": "^1.1.2",
-    "ut-portal": "^7.6.7",
+    "ut-portal": "^7.7.1",
     "ut-tools": "^6.37.0",
     "ut-webpack": "^7.4.0",
     "webpack": "^4.46.0",
