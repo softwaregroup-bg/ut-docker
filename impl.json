@@ -1,7 +1,7 @@
 {
   "name": "impl-docker",
   "description": "Base docker container for UT impl builds",
-  "version": "9.0.7",
+  "version": "9.0.8",
   "main": "index.js",
   "dependencies": {
     "boom": "7.2.0",
@@ -91,7 +91,7 @@
     "ut-function.capture-hapi": "^1.1.2",
     "ut-function.capture-request": "^1.1.2",
     "ut-portal": "^7.7.1",
-    "ut-tools": "^6.37.0",
+    "ut-tools": "^6.38.1",
     "ut-webpack": "^7.4.0",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^3.9.0",
