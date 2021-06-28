@@ -1,4 +1,4 @@
-FROM node:14.15.3-alpine
+FROM node:14.16.1-alpine
 RUN set -xe \
     && apk add --no-cache bash git openssh python make g++ \
     && git --version && bash --version && ssh -V && npm -v && node -v && yarn -v \
@@ -6,5 +6,5 @@ RUN set -xe \
 WORKDIR /app
 RUN chown -R node:node .
 USER node
-COPY --chown=node:node ut.json package.json
+COPY --chown=node:node ut/package.json package.json
 RUN npm --production=false install

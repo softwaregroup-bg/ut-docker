@@ -1,8 +1,0 @@
-FROM mhart/alpine-node:slim-14.16.1
-RUN apk add --no-cache tzdata
-USER node
-COPY --chown=node:node --from=${UT_PROJECT}:$TAG /app /app
-WORKDIR /app
-COPY --chown=node:node dist dist
-ENTRYPOINT ["node", "index.js"]
-CMD ["server"]
