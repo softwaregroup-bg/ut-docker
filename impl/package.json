@@ -1,7 +1,7 @@
 {
   "name": "impl-docker",
   "description": "Base docker container for UT impl builds",
-  "version": "9.0.11",
+  "version": "9.0.12",
   "main": "index.js",
   "dependencies": {
     "boom": "7.2.0",
@@ -39,7 +39,7 @@
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^7.39.2",
     "ut-port-tcp": "^7.3.2",
-    "ut-run": "^10.58.0",
+    "ut-run": "^10.62.0",
     "ut-telemetry": "^7.2.1",
     "uuid": "3.3.2",
     "yaml": "1.10.0"
