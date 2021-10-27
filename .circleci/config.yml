@@ -6,9 +6,9 @@ jobs:
      - checkout
      - run: docker info
      - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-     - run: docker build -f ut.Dockerfile -t softwaregroup/ut-docker:latest -t softwaregroup/ut-docker:9.0.16 .
-     - run: docker build -f impl.Dockerfile -t softwaregroup/impl-docker:latest -t softwaregroup/impl-docker:9.0.16 .
+     - run: docker build -f ut.Dockerfile -t softwaregroup/ut-docker:latest -t softwaregroup/ut-docker:9.0.17 .
+     - run: docker build -f impl.Dockerfile -t softwaregroup/impl-docker:latest -t softwaregroup/impl-docker:9.0.17 .
      - run: docker push softwaregroup/ut-docker:latest
-     - run: docker push softwaregroup/ut-docker:9.0.16
+     - run: docker push softwaregroup/ut-docker:9.0.17
      - run: docker push softwaregroup/impl-docker:latest
-     - run: docker push softwaregroup/impl-docker:9.0.16
+     - run: docker push softwaregroup/impl-docker:9.0.17
