@@ -21,6 +21,8 @@ docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.18
 docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
+docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest
 '''
                 }
             }
