@@ -1,4 +1,4 @@
-FROM node:14.16.1-alpine
+FROM node:14.19.0-alpine
 RUN set -xe \
     && apk add --no-cache bash git openssh python make g++ \
     && git --version && bash --version && ssh -V && npm -v && node -v && yarn -v \
