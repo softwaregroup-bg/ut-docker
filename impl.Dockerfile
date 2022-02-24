@@ -7,4 +7,6 @@ WORKDIR /app
 RUN chown -R node:node .
 USER node
 COPY --chown=node:node impl/package.json package.json
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true \
+    CHROME_BIN=/usr/bin/chromium-browser
 RUN npm --production=false install
