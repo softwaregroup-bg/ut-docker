@@ -13,12 +13,12 @@ pipeline {
                 ansiColor('xterm') {
                     sh '''docker info
 echo "${DOCKER_PSW}" | docker login --username "${DOCKER_USR}" --password-stdin nexus-dev.softwaregroup.com:5001
-docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:9.0.22 .
-docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.22 .
+docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:9.0.23 .
+docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.23 .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:9.0.22
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-docker:9.0.23
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.22
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-docker:9.0.23
 docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
 docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .

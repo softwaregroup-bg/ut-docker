@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "9.0.22",
+  "version": "9.0.23",
   "main": "index.js",
   "dependencies": {
   },
@@ -16,18 +16,18 @@
     "inquirer-autocomplete-prompt": "1.2.0",
     "json-schema-to-markdown": "1.1.1",
     "regenerator-runtime": "^0.13.9",
-    "tap": "^15.1.5",
+    "tap": "^15.2.3",
     "ut-cache": "^6.0.1",
     "ut-dispatch-db": "^1.4.1",
     "ut-port-script": "^7.2.0",
-    "ut-port-sql": "^7.42.3",
-    "ut-portal": "^7.38.4",
-    "ut-run": "^10.66.1",
-    "ut-tools": "^6.40.2",
+    "ut-port-sql": "^7.44.0",
+    "ut-portal": "^7.38.7",
+    "ut-run": "^10.66.3",
+    "ut-tools": "^6.40.3",
     "why-is-node-running": "^2.2.0"
   },
   "engines": {
-    "node": "^14.16.1",
+    "node": "^14.16.1 ^16.14.0",
     "npm": "^6.14.9",
     "yarn": "^1.22.5"
   }
