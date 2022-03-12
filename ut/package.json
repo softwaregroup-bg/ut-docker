@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "9.0.24",
+  "version": "9.0.25",
   "main": "index.js",
   "dependencies": {
   },
@@ -26,9 +26,10 @@
     "ut-port-sql": "^7.44.0",
     "ut-portal": "^7.38.7",
     "ut-run": "^10.66.3",
-    "ut-tools": "^6.40.4",
+    "ut-tools": "^6.40.5",
     "ut-webpack": "^7.9.1",
     "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2",
     "why-is-node-running": "^2.2.0"
   },
