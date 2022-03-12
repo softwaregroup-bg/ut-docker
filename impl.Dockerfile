@@ -9,4 +9,4 @@ USER node
 COPY --chown=node:node impl/package.json package.json
 RUN npm --production=false --legacy-peer-deps install \
     && npx playwright install chromium \
-    && npm cache clean
+    && npm cache clean --force
