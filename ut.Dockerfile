@@ -13,6 +13,6 @@ WORKDIR /app
 RUN chown -R node:node .
 USER node
 COPY --chown=node:node ut/package.json package.json
-RUN npm --production=false --legacy-peer-deps install \
+RUN npm --production=false --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
     && npx playwright install chromium \
     && npm cache clean --force
