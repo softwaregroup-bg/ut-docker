@@ -39,6 +39,7 @@
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^7.44.1",
     "ut-port-tcp": "^7.3.2",
+    "ut-port-webhook": "^8.2.0",
     "ut-run": ">=10.67.0-gallium.0 <=10.67.0-gallium.999",
     "ut-telemetry": "^7.2.2",
     "uuid": "8.3.2",

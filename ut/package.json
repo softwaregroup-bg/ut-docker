@@ -24,6 +24,7 @@
     "ut-dispatch-db": "^1.4.1",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^7.44.1",
+    "ut-port-webhook": "^8.2.0",
     "ut-portal": "^7.38.8",
     "ut-run": ">=10.67.0-gallium.0 <=10.67.0-gallium.999",
     "ut-tools": "^6.40.5",
