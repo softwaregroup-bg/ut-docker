@@ -1,7 +1,7 @@
 FROM node:16.14.2-bullseye-slim
 RUN set -xe \
     && apt-get update \
-    && apt-get -y install curl \
+    && apt-get -y install curl gnupg \
     && curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list \
     && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 RUN set -xe \
