@@ -12,6 +12,6 @@ RUN set -xe \
         libxcomposite1 libxdamage1 libxext6 libxfixes3 libxrandr2 \
         libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
     && ACCEPT_EULA=Y apt-get install -y msodbcsql18 mssql-tools18 \
-    && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf \
+    && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 COPY --chown=node:node --from=nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest /home/node/.cache/ms-playwright /home/node/.cache/ms-playwright
