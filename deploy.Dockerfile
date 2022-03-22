@@ -1,8 +1,10 @@
 FROM node:16.14.2-bullseye-slim
-RUN curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list \
-    && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 RUN set -xe \
     && apt-get update \
+    && apt-get install curl \
+    && curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list \
+    && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+RUN set -xe \
     && apt-get -y install tzdata \
         libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
         libcups2 libdrm2 libdbus-1-3 libxcb1 libxkbcommon0 libx11-6 \
