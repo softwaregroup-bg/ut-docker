@@ -9,10 +9,10 @@ RUN set -xe \
         libxcomposite1 libxdamage1 libxext6 libxfixes3 libxrandr2 \
         libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
     && ACCEPT_EULA=Y apt-get install -y msodbcsql18 mssql-tools18 \
-    && echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> /home/node/.bashrc \
     && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf \
     && git --version && bash --version && ssh -V && npm -v && node -v && yarn -v \
     && mkdir /var/lib/SoftwareGroup && chown -R node:node /var/lib/SoftwareGroup
+ENV PATH="$PATH:/opt/mssql-tools18/bin"
 WORKDIR /app
 RUN chown -R node:node .
 USER node
