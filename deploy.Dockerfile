@@ -1,4 +1,4 @@
-FROM node:16.14.2-bullseye-slim
+FROM node:16.15.0-bullseye-slim
 RUN set -xe \
     && apt-get update \
     && apt-get -y install curl gnupg \
