@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "9.0.31",
+  "version": "9.0.32",
   "main": "index.js",
   "dependencies": {
   },
