@@ -1,7 +1,7 @@
 {
   "name": "ut-docker",
   "description": "Base docker container for UT module builds",
-  "version": "9.0.33",
+  "version": "9.0.34",
   "main": "index.js",
   "dependencies": {
   },
@@ -33,7 +33,7 @@
     "ut-port-webhook": "^8.3.0",
     "ut-portal": "^8.0.7",
     "ut-run": "^10.69.2",
-    "ut-tools": "^6.40.10",
+    "ut-tools": "^6.41.0",
     "ut-webpack": "^7.9.6",
     "uuid": "8.3.2",
     "webpack": "^4.46.0",
