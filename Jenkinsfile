@@ -13,20 +13,18 @@ pipeline {
                 ansiColor('xterm') {
                     sh '''docker info
 echo "${DOCKER_PSW}" | docker login --username "${DOCKER_USR}" --password-stdin nexus-dev.softwaregroup.com:5001
-docker pull node:16.15.0-bullseye
-docker tag node:16.15.0-bullseye nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:latest
-docker tag node:16.15.0-bullseye nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:9.0.34
-docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:9.0.34 .
-docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:9.0.34 .
-docker build -f deploy.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:9.0.34 .
+docker build -f node.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:9.0.35 .
+docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:9.0.35 .
+docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:9.0.35 .
+docker build -f deploy.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:9.0.35 .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:9.0.34
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:9.0.35
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:9.0.34
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:9.0.35
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:9.0.34
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:9.0.35
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:9.0.34
+docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:9.0.35
 docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
 docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
