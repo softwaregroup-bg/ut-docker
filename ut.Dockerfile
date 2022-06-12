@@ -15,5 +15,5 @@ RUN set -xe \
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 USER node
 COPY --chown=node:node ut/package.json package.json
-RUN npm --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
+RUN npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
     && npm cache clean --force
