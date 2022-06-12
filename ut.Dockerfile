@@ -1,7 +1,7 @@
 FROM nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest
 USER root
 RUN set -xe \
-    curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list \
+    (curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list) \
     && (curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -) \
     && apt-get update \
     && apt-get -y install \
