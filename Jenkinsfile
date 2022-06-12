@@ -25,10 +25,10 @@ docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:l
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:9.0.36
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:9.0.36
-docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
-docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest
+# docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
+# docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
+# docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
+# docker push nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest
 '''
                 }
             }
