@@ -1,4 +1,4 @@
-FROM node:16.15.0-bullseye
+FROM node:16.15.1-bullseye
 RUN set -xe \
     && apt-get update \
     && apt-get -y install git openssh-client python3 make g++ tzdata \
