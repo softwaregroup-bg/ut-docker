@@ -10,7 +10,7 @@ RUN set -xe \
         libxcomposite1 libxdamage1 libxext6 libxfixes3 libxrandr2 \
         libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
         msodbcsql18 mssql-tools18 \
-    && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf \
+    && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 USER node
 COPY --chown=node:node ut/package.json package.json
