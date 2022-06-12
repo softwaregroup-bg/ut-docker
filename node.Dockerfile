@@ -8,5 +8,5 @@ WORKDIR /app
 RUN chown -R node:node .
 USER node
 COPY --chown=node:node node/package.json package.json
-RUN npm --production=false --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
+RUN npm --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
     && npm cache clean --force
