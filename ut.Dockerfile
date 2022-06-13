@@ -20,5 +20,5 @@ USER node
 COPY --chown=node:node ut/package.json package.json
 RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777,uid=1000,gid=1000 \
     set -xe \
-    && npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install
+    && npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
     && npx playwright install chromium
