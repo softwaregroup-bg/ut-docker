@@ -9,7 +9,7 @@ WORKDIR /app
 RUN chown -R node:node .
 USER node
 COPY --chown=node:node node/package.json package.json
-RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777 \
+RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777,uid=1000,gid=1000 \
     set -xe \
     && npm set cache /tmp/app/.npm \
     && npm --registry https://nexus.softwaregroup.com/repository/npm-all/ install

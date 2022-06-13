@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:experimental
 FROM nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest
 USER root
-RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777 \
+RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777,uid=1000,gid=1000 \
     set -xe \
     && (curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list) \
     && (curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -) \
@@ -18,6 +18,6 @@ RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777 \
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 USER node
 COPY --chown=node:node ut/package.json package.json
-RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777 \
+RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777,uid=1000,gid=1000 \
     set -xe \
     && npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install
