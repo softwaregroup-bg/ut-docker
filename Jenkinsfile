@@ -12,6 +12,7 @@ pipeline {
                 }
                 ansiColor('xterm') {
                     sh '''docker info
+export DOCKER_BUILDKIT=1
 echo "${DOCKER_PSW}" | docker login --username "${DOCKER_USR}" --password-stdin nexus-dev.softwaregroup.com:5001
 docker build -f node.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:9.0.36 .
 docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:9.0.36 .

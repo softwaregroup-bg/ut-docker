@@ -1,6 +1,8 @@
+# syntax=docker/dockerfile:experimental
 FROM nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest
 USER root
-RUN set -xe \
+RUN --mount=type=cache,target=/usr/src/app/.npm \
+    set -xe \
     && (curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list) \
     && (curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -) \
     && apt-get update \
@@ -11,9 +13,11 @@ RUN set -xe \
         libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
         msodbcsql18 mssql-tools18 \
     && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf \
-    && npm i --location=global ut-tools@^7.1.4 ut-help@^1.1.13 ut-storybook@^8.0.1 ut-webpack@^8.0.2
+    && npm set cache /usr/src/app/.npm \
+    && npm i --location=global ut-tools@^7.1.5 ut-help@^1.1.13 ut-storybook@^8.0.1 ut-webpack@^8.0.2
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 USER node
 COPY --chown=node:node ut/package.json package.json
-RUN npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
-    && npm cache clean --force
+RUN --mount=type=cache,target=/usr/src/app/.npm \
+    set -xe \
+    && npm --legacy-peer-deps --registry https://nexus.softwaregroup.com/repository/npm-all/ install

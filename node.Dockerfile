@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM node:16.15.1-bullseye
 RUN set -xe \
     && apt-get update \
@@ -8,5 +9,7 @@ WORKDIR /app
 RUN chown -R node:node .
 USER node
 COPY --chown=node:node node/package.json package.json
-RUN npm --registry https://nexus.softwaregroup.com/repository/npm-all/ install \
-    && npm cache clean --force
+RUN --mount=type=cache,target=/usr/src/app/.npm \
+    set -xe \
+    && npm set cache /usr/src/app/.npm \
+    && npm --registry https://nexus.softwaregroup.com/repository/npm-all/ install

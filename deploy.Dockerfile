@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM node:16.15.1-bullseye-slim
 RUN set -xe \
     && apt-get update \
@@ -13,4 +14,4 @@ RUN set -xe \
         msodbcsql18 mssql-tools18 \
     && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
-COPY --chown=node:node --from=nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest /home/node/.cache/ms-playwright /home/node/.cache/ms-playwright
+COPY --chown=node:node --from=nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:latest /home/node/.cache/ms-playwright /home/node/.cache/ms-playwright

@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM node:14.16.1-alpine
 RUN apk add --no-cache \
       chromium \

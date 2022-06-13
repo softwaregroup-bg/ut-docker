@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM node:10.1.0-alpine
 RUN npm install localtunnel-server && \
     cp -r `find . -name "localtunnel-server"` /app
