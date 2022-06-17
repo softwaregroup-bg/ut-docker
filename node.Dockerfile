@@ -12,4 +12,5 @@ COPY --chown=node:node node/* .
 RUN --mount=type=cache,target=/tmp/app/.npm,mode=0777,uid=1000,gid=1000 \
     set -xe \
     && npm set cache /tmp/app/.npm \
+    && npm i --location=global ut-tools@^7.1.7 \
     && npm install
