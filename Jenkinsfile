@@ -14,18 +14,14 @@ pipeline {
                     sh '''docker info
 export DOCKER_BUILDKIT=1
 echo "${DOCKER_PSW}" | docker login --username "${DOCKER_USR}" --password-stdin nexus-dev.softwaregroup.com:5001
-docker build -f node.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:9.0.36 .
-docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:9.0.36 .
-docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:9.0.36 .
-docker build -f deploy.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:latest -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:9.0.36 .
+docker build -f node.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest .
+docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:latest .
+docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:latest .
+docker build -f deploy.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:latest .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:9.0.36
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium-global:9.0.36
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium-global:9.0.36
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:latest
-docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium-global:9.0.36
 # docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
 # docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
 # docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
