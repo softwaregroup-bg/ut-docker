@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium-global:latest
+FROM nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:latest
 USER root
 RUN --mount=type=cache,target=/root/.npm,mode=0777 \
     set -xe \
