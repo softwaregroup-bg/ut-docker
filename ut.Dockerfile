@@ -13,7 +13,7 @@ RUN --mount=type=cache,target=/root/.npm,mode=0777 \
         libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
         msodbcsql18 mssql-tools18 \
     && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf \
-    && npm i --location=global ut-help@^1.1.13 ut-storybook@^8.0.2 ut-webpack@^8.0.2
+    && npm i --location=global ut-help@^1.1.15 ut-storybook@^8.0.2 ut-webpack@^8.0.2
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
 USER node
 COPY --chown=node:node ut/package.json package.json
