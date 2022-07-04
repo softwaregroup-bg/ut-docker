@@ -10,7 +10,7 @@ RUN set -xe \
         libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 \
         libcups2 libdrm2 libdbus-1-3 libxcb1 libxkbcommon0 libx11-6 \
         libxcomposite1 libxdamage1 libxext6 libxfixes3 libxrandr2 \
-        libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 \
+        libgbm1 libpango-1.0-0 libcairo2 libasound2 libatspi2.0-0 libwayland-client0 \
         msodbcsql18 mssql-tools18 \
     && sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
 ENV PATH="$PATH:/opt/mssql-tools18/bin"
