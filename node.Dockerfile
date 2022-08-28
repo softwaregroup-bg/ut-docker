@@ -8,7 +8,7 @@ RUN --mount=type=cache,target=/root/.npm,mode=0777 \
     && mkdir /var/lib/SoftwareGroup && chown -R node:node /var/lib/SoftwareGroup \
     && mkdir /home/node/.npm && chown -R node:node /home/node/.npm \
     && npm set cache /root/.npm \
-    && npm i --location=global ut-tools@^7.1.11
+    && npm i --location=global ut-tools@^7.1.12
 WORKDIR /app
 RUN chown -R node:node .
 USER node
