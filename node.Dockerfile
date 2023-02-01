@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM node:16.19.0-bullseye
+FROM node:16.19.1-bullseye
 RUN --mount=type=cache,target=/root/.npm,mode=0777 \
     set -xe \
     && apt-get update \
@@ -8,7 +8,7 @@ RUN --mount=type=cache,target=/root/.npm,mode=0777 \
     && mkdir /var/lib/SoftwareGroup && chown -R node:node /var/lib/SoftwareGroup \
     && mkdir /home/node/.npm && chown -R node:node /home/node/.npm \
     && npm set cache /root/.npm \
-    && npm i --location=global ut-tools@^7.2.0
+    && npm i --location=global ut-tools@^7.3.0
 WORKDIR /app
 RUN chown -R node:node .
 USER node
