@@ -18,10 +18,12 @@ docker build -f node.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregrou
 docker build -f ut.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest .
 docker build -f impl.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:latest .
 docker build -f deploy.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:latest .
+docker build -f dockeragent.Dockerfile -t nexus-dev.softwaregroup.com:5001/azure/dockeragent:latest .
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/node-gallium:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/ut-gallium:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/impl-gallium:latest
 docker push nexus-dev.softwaregroup.com:5001/softwaregroup/deploy-gallium:latest
+docker push nexus-dev.softwaregroup.com:5001/azure/dockeragent:latest
 # docker build -f capture.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest .
 # docker push nexus-dev.softwaregroup.com:5001/softwaregroup/capture-website:latest
 # docker build -f localtunnel.Dockerfile -t nexus-dev.softwaregroup.com:5001/softwaregroup/localtunnel:latest .
