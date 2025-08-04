@@ -46,7 +46,7 @@ The following base Docker images are available:
 
 - `nexus-dev.softwaregroup.com:5000/softwaregroup/capture-website` -
   this image is used for capturing screenshots of SonarQube after
-  a build.
+  a build. Rebuid.
 
 - `nexus-dev.softwaregroup.com:5000/softwaregroup/localtunnel` -
 
