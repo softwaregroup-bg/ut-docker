@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM node:16.20.2-bullseye
+FROM node:22.11.0-bullseye-slim
 RUN --mount=type=cache,target=/root/.npm,mode=0777 \
     set -xe \
     && apt-get update \
