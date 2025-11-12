@@ -8,7 +8,7 @@ For more information, check the documentation of the shared
 
 The following base Docker images are available:
 
-- `nexus-dev.softwaregroup.com:5000/softwaregroup/node-gallium` -
+- `nexus-dev.softwaregroup.com:5000/softwaregroup/node-jod` -
   this image is suitable for building low level UT modules, like
   ports, codecs, etc.
 
@@ -18,12 +18,12 @@ The following base Docker images are available:
   - global installation of
     [ut-tools](https://www.npmjs.com/package/ut-tools) version 7.
 
-- `nexus-dev.softwaregroup.com:5000/softwaregroup/ut-gallium` -
+- `nexus-dev.softwaregroup.com:5000/softwaregroup/ut-jod` -
   this image is suitable for building higher level modules,
   which contain business logic. It includes more dependencies,
   which are often needed by the business logic modules.
 
-  It is based on node-gallium, with these additional packages
+  It is based on node-jod, with these additional packages
   preinstalled:
   - global packages:
     - [ut-help](https://www.npmjs.com/package/ut-help)
@@ -32,14 +32,14 @@ The following base Docker images are available:
   - local packages:
     - see [ut/package.json](./ut/package.json) for full list of packages.
 
-- `nexus-dev.softwaregroup.com:5000/softwaregroup/impl-gallium` -
+- `nexus-dev.softwaregroup.com:5000/softwaregroup/impl-jod` -
   this image is suitable for building implementations.
 
-  It is based on ut-gallium, with many of the frequently used
+  It is based on ut-jod, with many of the frequently used
   business modules preinstalled. See [impl/package.json](./impl/package.json)
   for full list of packages.
 
-- `nexus-dev.softwaregroup.com:5000/softwaregroup/deploy-gallium` -
+- `nexus-dev.softwaregroup.com:5000/softwaregroup/deploy-jod` -
   this image is used for building the deployment image. It does not
   contain any build tools, but instead has some third party dependencies
   preinstalled - such as chromium and mssql tools like bcp.
