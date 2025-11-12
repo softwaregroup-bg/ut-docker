@@ -52,3 +52,4 @@ The following base Docker images are available:
 
   This image is still work in progress and is intended to enable
   automated tests that involve webhook calls from external systems.
+  just rebuild
